@@ -1,5 +1,5 @@
-# CPUControl
-Anzeige der CPU Informationen auf OLED Display
+# Displaying device information like Host IP, 
+#CPU and Memory workload on the OLED Display
 
 # Running CPU Control Container:
 # Prerequisite

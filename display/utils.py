@@ -28,8 +28,7 @@ def power_mode():
     Returns:
         str: The current power mode.  Either 'MAXN' or '5W'.
     """
-    return subprocess.check_output("nvpmodel -q | grep -o '5W\|MAXN'", shell = True ).decode('utf-8').strip('\n')
-
+    return '5W'
 
 def power_usage():
     """Gets the Jetson's current power usage in Watts

@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/l4t-base:r32.5.0
+FROM nvidia/aitech-base-image:latest
 COPY nvidia /opt/
 RUN mkdir /usr/share/CPUControl
 RUN chmod -R 774 /usr/share/CPUControl
@@ -14,4 +14,5 @@ RUN ./usr/share/CPUControl/install.sh klmn13klmn
 WORKDIR /usr/share/CPUControl
 expose 8000
 
-CMD python3 /usr/share/CPUControl/display/display-server.py
+CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"] && \
+    python3 /usr/share/CPUControl/display/display-server.py

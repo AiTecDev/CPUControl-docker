@@ -1,2 +1,3 @@
 # Git ignore files
 nvidia
+/nbproject/private/

@@ -2,7 +2,6 @@ FROM ubuntu:18.04
 WORKDIR ./
 RUN mkdir /usr/share/CPUControl
 RUN chmod -R 774 /usr/share/CPUControl
-COPY install.sh /usr/share/CPUControl
 RUN mkdir /usr/share/CPUControl/display
 COPY display /usr/share/CPUControl/display
 RUN apt-get update

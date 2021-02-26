@@ -10,5 +10,5 @@ cp /opt/nvidia .
 
 # Build display container and run it.
 - sudo docker build -t  aitecdev/cpu-control-display -f Dockerfile .
-- sudo docker run --network host --runtime nvidia -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix - --privileged  aitecdev/cpu-control-display:latest
+- sudo docker run --network host --runtime nvidia -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix --privileged aitecdev/cpu-control-display:latest
 
